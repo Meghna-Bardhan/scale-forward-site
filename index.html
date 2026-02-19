@@ -7,68 +7,245 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div class="grain" aria-hidden="true"></div>
+        <div class="spotlight" aria-hidden="true"></div>
+        <nav class="sidebar" aria-label="Section navigation">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+            <label class="hamburger" for="nav-toggle" aria-controls="nav-links" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="sidebar-inner" id="nav-links">
+                <span class="nav-title">Navigate</span>
+                <a href="#intro">Introduction</a>
+                <a href="#main-stage">Main Stage</a>
+                <a href="#second-stage">Second Stage</a>
+                <a href="#key-goals">Key Goals</a>
+            </div>
+        </nav>
         <main class="page">
-            <span class="badge">2026 Conference</span>
             <section class="hero">
-                <div>
-                    <h1>Scale Forward — the first Scalable Conference in 2026</h1>
-                    <p>
-                        Step into a one-day sprint built for leaders and builders who want to design systems that
-                        grow without breaking. Scale Forward is where strategy meets execution.
-                    </p>
+                <div class="hero-copy">
+                    <div class="logo-hero">
+                        <img class="logo" src="logo-scale-forward.png" alt="Scale Forward logo" />
+                    </div>
+                    <p class="subtitle">The first ever Scalable Engineering Conference.</p>
+                    <p class="tagline">Technology never sleeps.</p>
                 </div>
+            </section>
+
+            <section class="intro" id="intro">
                 <div class="hero-card">
-                    <strong>Intro</strong>
+                    <h2>👋 Introduction</h2>
                     <p>
-                        Welcome to the first Scalable Conference in 2026. We are here to scale forward—through
-                        bold ideas, shared lessons, and practical blueprints.
+                        Scale Forward - The Scalable Engineering Conference 2026 is our first internal technology
+                        event where engineers from all alliances will share their knowledge, showcase projects, and
+                        inspire innovation across the company.
                     </p>
                     <div class="meta">
-                        <div>Theme: Scale Forward</div>
-                        <div>Format: Keynotes + deep-dive talks</div>
-                        <div>Duration: 09:00 — 18:00</div>
+                        <div>🗓️ Key Dates: March 11th, 2026</div>
+                        <div>📍 Venue: Alte Münze in Berlin</div>
+                        <div>🧭 Theme: “Building the Future of Scalable Engineering”</div>
+                        <div>👥 Audience: All Scalable engineers</div>
                     </div>
                 </div>
             </section>
 
-            <section class="schedule">
-                <h2>Schedule for Talks</h2>
-                <div class="timeline">
-                    <div class="slot">
-                        <div class="time">09:00</div>
+            <section class="schedule" id="main-stage">
+                <div class="schedule-head">
+                    <h2>Schedule for Main Stage</h2>
+                    <p>Talk titles are placeholders — final line-up will be announced soon.</p>
+                </div>
+                <ol class="timeline">
+                    <li class="slot break">
+                        <div class="time">08:30 – 09:30</div>
                         <div>
-                            <h3>Arrival + Opening Moments</h3>
-                            <p>Doors open, coffee and connections.</p>
+                            <h3>Arrival / Registration</h3>
+                            <p>Check-in and settle in.</p>
                         </div>
-                    </div>
-                    <div class="slot">
-                        <div class="time">09:30</div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">09:30 – 09:45</div>
                         <div>
-                            <h3>Open Keynote</h3>
-                            <p>Setting the vision for the future of scalable organizations.</p>
+                            <h3>Talk 1 — XXX</h3>
+                            <p>Opening remarks.</p>
                         </div>
-                    </div>
-                    <div class="slot">
+                    </li>
+                    <li class="slot">
+                        <div class="time">09:45 – 10:15</div>
+                        <div>
+                            <h3>Talk 2 — XXX</h3>
+                            <p>Keynote session.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">10:15 – 10:35</div>
+                        <div>
+                            <h3>Talk 3 — XXX</h3>
+                            <p>Deep-dive session.</p>
+                        </div>
+                    </li>
+                    <li class="slot break">
+                        <div class="time">10:35 – 10:55</div>
+                        <div>
+                            <h3>Coffee Break</h3>
+                            <p>Recharge and connect.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">10:55 – 11:15</div>
+                        <div>
+                            <h3>Talk 4 — XXX</h3>
+                            <p>Strategy and systems.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">11:15 – 11:40</div>
+                        <div>
+                            <h3>Talk 5 — XXX</h3>
+                            <p>Scaling stories.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">11:40 – 12:00</div>
+                        <div>
+                            <h3>Talk 6 — XXX</h3>
+                            <p>Engineering at scale.</p>
+                        </div>
+                    </li>
+                    <li class="slot break">
                         <div class="time">12:00 – 13:00</div>
                         <div>
-                            <h3>Lunch</h3>
-                            <p>Refuel and meet the community.</p>
+                            <h3>Lunch Break</h3>
+                            <p>Networking and refuel.</p>
                         </div>
-                    </div>
-                    <div class="slot">
-                        <div class="time">13:00 – 18:00</div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">13:00 – 13:20</div>
                         <div>
-                            <h3>Afternoon Talks</h3>
-                            <p>Deep dives, case studies, and future-forward roadmaps.</p>
+                            <h3>Talk 7 — XXX</h3>
+                            <p>Tools for scale.</p>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">13:20 – 13:50</div>
+                        <div>
+                            <h3>Talk 8 — XXX</h3>
+                            <p>Growth and resilience.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">13:50 – 14:15</div>
+                        <div>
+                            <h3>Talk 9 — XXX</h3>
+                            <p>Modern infrastructure.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">14:15 – 14:45</div>
+                        <div>
+                            <h3>Talk 10 — XXX</h3>
+                            <p>Team evolution.</p>
+                        </div>
+                    </li>
+                    <li class="slot break">
+                        <div class="time">14:45 – 15:45</div>
+                        <div>
+                            <h3>Coffee Break</h3>
+                            <p>Reset and reconnect.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">15:45 – 16:05</div>
+                        <div>
+                            <h3>Talk 11 — XXX</h3>
+                            <p>Quality at scale.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">16:05 – 16:35</div>
+                        <div>
+                            <h3>Talk 12 — XXX</h3>
+                            <p>Technical excellence.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">16:35 – 17:00</div>
+                        <div>
+                            <h3>Talk 13 — XXX</h3>
+                            <p>Durable systems.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">17:10 – 17:45</div>
+                        <div>
+                            <h3>Talk 14 — XXX</h3>
+                            <p>Closing notes and highlights.</p>
+                        </div>
+                    </li>
+                    <li class="slot break">
+                        <div class="time">From 18:30</div>
+                        <div>
+                            <h3>Dinner and Party</h3>
+                            <p>Celebrate the day together.</p>
+                        </div>
+                    </li>
+                </ol>
             </section>
 
-            <section class="cta">
-                <strong>Ready to scale forward?</strong>
-                <span>Join us for a full day of ideas, frameworks, and conversations that drive sustainable growth.</span>
+            <section class="schedule" id="second-stage">
+                <div class="schedule-head">
+                    <h2>Schedule for Second Stage</h2>
+                    <p>Five short sessions, 15 minutes each.</p>
+                </div>
+                <ol class="timeline">
+                    <li class="slot">
+                        <div class="time">14:45 – 15:00</div>
+                        <div>
+                            <h3>Talk A — XXX</h3>
+                            <p>Second stage session.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">15:00 – 15:15</div>
+                        <div>
+                            <h3>Talk B — XXX</h3>
+                            <p>Second stage session.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">15:15 – 15:30</div>
+                        <div>
+                            <h3>Talk C — XXX</h3>
+                            <p>Second stage session.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">15:30 – 15:45</div>
+                        <div>
+                            <h3>Talk D — XXX</h3>
+                            <p>Second stage session.</p>
+                        </div>
+                    </li>
+                    <li class="slot">
+                        <div class="time">15:45 – 16:00</div>
+                        <div>
+                            <h3>Talk E — XXX</h3>
+                            <p>Second stage session.</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="goals-panel" id="key-goals">
+                <div class="goals-panel-inner">
+                    <h2>Key Goals</h2>
+                    <ul>
+                        <li>Foster cross-alliance knowledge sharing</li>
+                        <li>Highlight innovative projects and practices</li>
+                        <li>Strengthen connections across all engineering teams</li>
+                    </ul>
+                </div>
             </section>
         </main>
     </body>
