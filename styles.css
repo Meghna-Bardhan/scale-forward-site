@@ -168,12 +168,6 @@ body {
     color: rgba(238, 241, 247, 0.75);
 }
 
-.seo-blurb {
-    margin-top: -4px;
-    color: rgba(238, 241, 247, 0.7);
-    font-size: clamp(0.9rem, 2.1vw, 1rem);
-}
-
 .tagline {
     font-family: 'Sora', 'Space Grotesk', sans-serif;
     font-size: clamp(0.9rem, 2.2vw, 1.05rem);
