@@ -278,6 +278,36 @@ body {
     gap: 12px;
 }
 
+.sponsor {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.sponsor-inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 22px;
+    border-radius: 999px;
+    background: rgba(15, 18, 26, 0.8);
+    border: 1px solid rgba(138, 154, 255, 0.2);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.35);
+}
+
+.sponsor-inner span {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--slate);
+}
+
+.sponsor-inner img {
+    height: 52px;
+    width: auto;
+    display: block;
+}
+
 .schedule {
     margin-top: 72px;
 }
