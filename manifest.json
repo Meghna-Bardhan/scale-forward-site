@@ -1,0 +1,15 @@
+{
+  "name": "Scale Forward 2026",
+  "short_name": "Scale Forward",
+  "start_url": "/scale-forward-site/",
+  "display": "standalone",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
