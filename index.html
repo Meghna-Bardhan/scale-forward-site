@@ -32,8 +32,14 @@
             content="Scale Forward is the first ever Scalable Engineering Conference. Explore the schedule, speakers, and vote for your favorite talks."
         />
         <meta name="twitter:image" content="https://meghna-bardhan.github.io/scale-forward-site/logo-scale-forward.png" />
+
         <link rel="icon" href="favicon.png" />
         <link rel="manifest" href="manifest.json" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -64,271 +70,289 @@
                 "url": "https://meghna-bardhan.github.io/scale-forward-site/"
             }
         </script>
-        <link rel="stylesheet" href="styles.css" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
-        <div class="spotlight" aria-hidden="true"></div>
-        <nav class="sidebar" aria-label="Section navigation">
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-            <label class="hamburger" for="nav-toggle" aria-controls="nav-links" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <div class="sidebar-inner" id="nav-links">
-                <span class="nav-title">Navigate</span>
-                <a href="#intro">Introduction</a>
-                <a href="#main-stage">Main Stage</a>
-                <a href="#second-stage">Second Stage</a>
-                <a href="#key-goals">Key Goals</a>
-                <a href="#voting">Voting</a>
-            </div>
-        </nav>
-        <main class="page">
-            <section class="hero">
-                <div class="hero-copy">
-                    <div class="logo-hero">
-                        <img class="logo" src="logo-scale-forward.png" alt="Scale Forward logo" />
+    <body class="min-h-screen bg-[#0b0d12] text-[#eef1f7] font-['Ubuntu',sans-serif]">
+        <div class="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_10%,rgba(138,154,255,0.2),transparent_45%),radial-gradient(circle_at_90%_30%,rgba(85,227,179,0.18),transparent_40%),radial-gradient(circle_at_30%_90%,rgba(244,201,122,0.15),transparent_35%)]"></div>
+
+        <nav class="fixed left-4 top-4 z-20">
+            <details class="group">
+                <summary
+                    class="flex h-[60px] w-[60px] cursor-pointer list-none items-center justify-center rounded-full border border-white/20 bg-[#0f121a]/85 shadow-xl"
+                >
+                    <div class="flex flex-col items-center justify-center gap-1">
+                        <span class="h-[2px] w-5 rounded-full bg-white transition-all group-open:translate-y-[6px] group-open:rotate-45"></span>
+                        <span class="h-[2px] w-5 rounded-full bg-white transition-all group-open:opacity-0"></span>
+                        <span class="h-[2px] w-5 rounded-full bg-white transition-all group-open:-translate-y-[6px] group-open:-rotate-45"></span>
                     </div>
-                    <p class="subtitle">The first ever Scalable Engineering Conference.</p>
-                    <p class="tagline">Technology never sleeps.</p>
+                </summary>
+                <div class="mt-3 w-56 rounded-2xl border border-white/20 bg-[#0f121a]/90 p-4 shadow-2xl backdrop-blur">
+                    <span class="text-xs uppercase tracking-[0.2em] text-[#9aa2b1]">Navigate</span>
+                    <div class="mt-3 flex flex-col gap-2 text-sm">
+                        <a class="rounded-lg px-2 py-1 hover:bg-white/10" href="#intro">Introduction</a>
+                        <a class="rounded-lg px-2 py-1 hover:bg-white/10" href="#main-stage">Main Stage</a>
+                        <a class="rounded-lg px-2 py-1 hover:bg-white/10" href="#second-stage">Second Stage</a>
+                        <a class="rounded-lg px-2 py-1 hover:bg-white/10" href="#key-goals">Key Goals</a>
+                        <a class="rounded-lg px-2 py-1 hover:bg-white/10" href="#voting">Voting</a>
+                    </div>
+                </div>
+            </details>
+        </nav>
+
+        <main class="relative mx-auto lg:w-5/6 px-6 pb-24 pt-16">
+            <section class="flex flex-col justify-center items-center w-full lg:h-[600px] lg:p-[72px] p-[12px] gap-10">
+                <div class="lg:mb-20">
+                    <img class="w-full" src="logo-scale-forward.png" alt="Scale Forward logo" />
+                </div>
+                <div class="flex flex-col text-center items-center ">
+                    <p class="mb-1 text-[clamp(1rem,2.5vw,2.0rem)] text-slate-400 font-light">
+                        The First Ever Scalable Engineering Conference.
+                    </p>
+                    <p class="text-[clamp(0.9rem,2.2vw,1.15rem)] font-extralight text-slate-400">Technology never sleeps.</p>
                 </div>
             </section>
 
-            <section class="intro" id="intro">
-                <div class="hero-card">
-                    <h2>👋 Introduction</h2>
-                    <p>
+            <section class="mt-10" id="intro">
+                <div class="rounded-3xl border border-white/20 bg-white/5 p-7 shadow-2xl backdrop-blur">
+                    <h2 class="text-[clamp(1rem,2.6vw,1.2rem)] font-semibold uppercase tracking-[0.12em] text-[#b9a7ff]">Introduction</h2>
+                    <p class="mt-4 text-[clamp(0.95rem,2.2vw,1.05rem)] text-white/80">
                         Scale Forward - The Scalable Engineering Conference 2026 is our first internal technology
                         event where engineers from all alliances will share their knowledge, showcase projects, and
                         inspire innovation across the company.
                     </p>
-                    <div class="meta">
-                        <div>🗓️ Key Dates: March 11th, 2026</div>
-                        <div>
+                    <div class="mt-5 grid gap-3 text-[clamp(0.95rem,2.2vw,1.05rem)] font-semibold text-white">
+                        <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-2">🗓️ Key Dates: March 11th, 2026</div>
+                        <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-2">
                             📍 Venue:
-                            <a class="meta-link" href="https://maps.app.goo.gl/kjhM7SAdHcwhpeN4A" target="_blank" rel="noopener noreferrer">Alte Münze in Berlin</a>
+                            <a class="text-[#55e3b3] hover:underline" href="https://maps.app.goo.gl/kjhM7SAdHcwhpeN4A" target="_blank" rel="noopener noreferrer">
+                                Alte Münze in Berlin
+                            </a>
                         </div>
-                        <div>🧭 Theme: “Building the Future of Scalable Engineering”</div>
-                        <div>👥 Audience: All Scalable engineers</div>
+                        <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-2">🧭 Theme: “Building the Future of Scalable Engineering”</div>
+                        <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-2">👥 Audience: All Scalable engineers</div>
                     </div>
                 </div>
             </section>
 
-            <section class="schedule" id="main-stage">
-                <div class="schedule-head">
-                    <h2>Schedule for Main Stage</h2>
+            <section class="mt-16" id="main-stage">
+                <div class="flex flex-wrap items-baseline justify-between gap-3">
+                    <h2 class="text-[clamp(1rem,2.6vw,1.2rem)] font-semibold uppercase tracking-[0.12em] text-[#55e3b3]">Schedule for Main Stage</h2>
                 </div>
-                <ol class="timeline">
-                    <li class="slot break">
-                        <div class="time">08:30 – 09:30</div>
+                <ol class="mt-6 grid gap-4 schedule">
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">08:30 – 09:30</div>
                         <div>
-                            <h3>Arrival / Registration</h3>
-                            <p>Check-in and settle in.</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Arrival / Registration</h3>
+                            <p class="text-white/70">Check-in and settle in.</p>
                         </div>
                     </li>
-                    <li class="slot highlight">
-                        <div class="time">09:30 – 09:45</div>
+                    <li class="grid gap-4 rounded-2xl border border-[#8a9aff]/55 bg-[#141828]/90 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#8a9aff]">09:30 – 09:45</div>
                         <div>
-                            <h3>Welcome</h3>
-                            <p>Anna Gruber</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Welcome</h3>
+                            <p class="text-white/70">Anna Gruber</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">09:45 – 10:15</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">09:45 – 10:15</div>
                         <div>
-                            <h3>Keynote</h3>
-                            <p>Andreas Schranzhofer</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Keynote</h3>
+                            <p class="text-white/70">Andreas Schranzhofer</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">10:15 – 10:35</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">10:15 – 10:35</div>
                         <div>
-                            <h3>Systems Thinking - Stop Firefighting and Start Leading to Solve Your Team's Most Persistent Challenges</h3>
-                            <p>Pavel Drabushevich</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">
+                                Systems Thinking - Stop Firefighting and Start Leading to Solve Your Team's Most Persistent Challenges
+                            </h3>
+                            <p class="text-white/70">Pavel Drabushevich</p>
                         </div>
                     </li>
-                    <li class="slot vote">
-                        <div class="time">Vote</div>
+                    <li class="grid gap-4 rounded-2xl border border-[#55e3b3]/50 bg-[#0f161a]/90 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#55e3b3]">Vote</div>
                         <div>
-                            <h3>Main Stage Talks (10:15 – 10:35)</h3>
-                            <p>Pick your favorite talk from this block.</p>
-                            <a class="vote-link" href="https://forms.gle/MEYS21LY9XK1Tza7A" target="_blank" rel="noopener noreferrer">Open voting form</a>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Main Stage Talks (10:15 – 10:35)</h3>
+                            <p class="text-white/70">Pick your favorite talk from this block.</p>
+                            <a class="mt-3 inline-flex items-center gap-2 rounded-full border border-[#55e3b3]/40 bg-[#55e3b3]/15 px-4 py-2 text-sm font-semibold hover:bg-[#55e3b3]/25" href="https://forms.gle/MEYS21LY9XK1Tza7A" target="_blank" rel="noopener noreferrer">Open voting form</a>
                         </div>
                     </li>
-                    <li class="slot break">
-                        <div class="time">10:35 – 10:55</div>
+                    <li class="grid gap-4 rounded-2xl border border-[#f4c97a]/50 bg-[#191c26]/90 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">10:35 – 10:55</div>
                         <div>
-                            <h3>Coffee Break</h3>
-                            <p>Recharge and connect.</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Coffee Break</h3>
+                            <p class="text-white/70">Recharge and connect.</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">10:55 – 11:15</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">10:55 – 11:15</div>
                         <div>
-                            <h3>Thinking in Bets - Making Smarter Decisions When You Don't Have All the Facts</h3>
-                            <p>Katya Kempkens</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Thinking in Bets - Making Smarter Decisions When You Don't Have All the Facts</h3>
+                            <p class="text-white/70">Katya Kempkens</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">11:15 – 11:40</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">11:15 – 11:40</div>
                         <div>
-                            <h3>Divided by Domain, United by DX - The Story of Our Atomic Frontend Revolution</h3>
-                            <p>Wilhelm, Mathilde, Eesh Tyagi</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">
+                                Divided by Domain, United by DX - The Story of Our Atomic Frontend Revolution
+                            </h3>
+                            <p class="text-white/70">Wilhelm, Mathilde, Eesh Tyagi</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">11:40 – 12:00</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">11:40 – 12:00</div>
                         <div>
-                            <h3>Getting Date/Time Right in Core Banking and Trading Systems</h3>
-                            <p>Renjith Chittett Soman, Ahmed Eraky</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Getting Date/Time Right in Core Banking and Trading Systems</h3>
+                            <p class="text-white/70">Renjith Chittett Soman, Ahmed Eraky</p>
                         </div>
                     </li>
-                    <li class="slot vote">
-                        <div class="time">Vote</div>
+                    <li class="grid gap-4 rounded-2xl border border-[#55e3b3]/50 bg-[#0f161a]/90 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#55e3b3]">Vote</div>
                         <div>
-                            <h3>Main Stage Talks (10:55 – 12:00)</h3>
-                            <p>Pick your favorite talk from this block.</p>
-                            <a class="vote-link" href="https://forms.gle/pcddGKHkPoCeiuWZ7" target="_blank" rel="noopener noreferrer">Open voting form</a>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Main Stage Talks (10:55 – 12:00)</h3>
+                            <p class="text-white/70">Pick your favorite talk from this block.</p>
+                            <a class="mt-3 inline-flex items-center gap-2 rounded-full border border-[#55e3b3]/40 bg-[#55e3b3]/15 px-4 py-2 text-sm font-semibold hover:bg-[#55e3b3]/25" href="https://forms.gle/pcddGKHkPoCeiuWZ7" target="_blank" rel="noopener noreferrer">Open voting form</a>
                         </div>
                     </li>
-                    <li class="slot break">
-                        <div class="time">12:00 – 13:00</div>
+                    <li class="grid gap-4 rounded-2xl border border-[#f4c97a]/50 bg-[#191c26]/90 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">12:00 – 13:00</div>
                         <div>
-                            <h3>Lunch Break</h3>
-                            <p>Networking and refuel.</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Lunch Break</h3>
+                            <p class="text-white/70">Networking and refuel.</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">13:00 – 13:25</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">13:00 – 13:25</div>
                         <div>
-                            <h3>Beyond REST - Why We Bet on gRPC (and What We Learned Running it at Scale)</h3>
-                            <p>Abdorrahman (Rahman) Khanipour</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Beyond REST - Why We Bet on gRPC (and What We Learned Running it at Scale)</h3>
+                            <p class="text-white/70">Abdorrahman (Rahman) Khanipour</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">13:25 – 13:55</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">13:25 – 13:55</div>
                         <div>
-                            <h3>Scalable Crypto - From 5 to 35 Coins, from 5 to 50 ETPs, from Shaky to Scalable</h3>
-                            <p>Kruno Grčević, Karsten Tymann</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Scalable Crypto - From 5 to 35 Coins, from 5 to 50 ETPs, from Shaky to Scalable</h3>
+                            <p class="text-white/70">Kruno Grčević, Karsten Tymann</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">13:55 – 14:15</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">13:55 – 14:15</div>
                         <div>
-                            <h3>AI Tooling at Scalable - Giving Engineers Time to Breathe at Scale</h3>
-                            <p>Emir Demirdag</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">AI Tooling at Scalable - Giving Engineers Time to Breathe at Scale</h3>
+                            <p class="text-white/70">Emir Demirdag</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">14:15 – 14:45</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">14:15 – 14:45</div>
                         <div>
-                            <h3>Team Topologies and Context Maps in Scalable</h3>
-                            <p>Luis Morales</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Team Topologies and Context Maps in Scalable</h3>
+                            <p class="text-white/70">Luis Morales</p>
                         </div>
                     </li>
-                    <li class="slot vote">
-                        <div class="time">Vote</div>
+                    <li class="grid gap-4 rounded-2xl border border-[#55e3b3]/50 bg-[#0f161a]/90 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#55e3b3]">Vote</div>
                         <div>
-                            <h3>Main Stage Talks (13:00 – 14:45)</h3>
-                            <p>Pick your favorite talk from this block.</p>
-                            <a class="vote-link" href="https://forms.gle/BAu71GhKQfRDWTha7" target="_blank" rel="noopener noreferrer">Open voting form</a>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Main Stage Talks (13:00 – 14:45)</h3>
+                            <p class="text-white/70">Pick your favorite talk from this block.</p>
+                            <a class="mt-3 inline-flex items-center gap-2 rounded-full border border-[#55e3b3]/40 bg-[#55e3b3]/15 px-4 py-2 text-sm font-semibold hover:bg-[#55e3b3]/25" href="https://forms.gle/BAu71GhKQfRDWTha7" target="_blank" rel="noopener noreferrer">Open voting form</a>
                         </div>
                     </li>
-                    <li class="slot break">
-                        <div class="time">14:45 – 15:45</div>
+                    <li class="grid gap-4 rounded-2xl border border-[#f4c97a]/50 bg-[#191c26]/90 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">14:45 – 15:45</div>
                         <div>
-                            <h3>Coffee Break</h3>
-                            <p>Reset and reconnect.</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Coffee Break</h3>
+                            <p class="text-white/70">Reset and reconnect.</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">15:45 – 16:05</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">15:45 – 16:05</div>
                         <div>
-                            <h3>How to Create E2E Tests for Payments</h3>
-                            <p>Andrei Chernyshev</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">How to Create E2E Tests for Payments</h3>
+                            <p class="text-white/70">Andrei Chernyshev</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">16:05 – 16:35</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">16:05 – 16:35</div>
                         <div>
-                            <h3>Market Data - A Journey of Technical Excellence</h3>
-                            <p>Renato Abreu</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Market Data - A Journey of Technical Excellence</h3>
+                            <p class="text-white/70">Renato Abreu</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">16:35 – 17:10</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">16:35 – 17:10</div>
                         <div>
-                            <h3>Immortal by Design - Building Resilient Systems with Temporal</h3>
-                            <p>Chirag Dhingra, Peter Kielar, Vitalina Khanenko</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Immortal by Design - Building Resilient Systems with Temporal</h3>
+                            <p class="text-white/70">Chirag Dhingra, Peter Kielar, Vitalina Khanenko</p>
                         </div>
                     </li>
-                    <li class="slot vote">
-                        <div class="time">Vote</div>
+                    <li class="grid gap-4 rounded-2xl border border-[#55e3b3]/50 bg-[#0f161a]/90 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#55e3b3]">Vote</div>
                         <div>
-                            <h3>Main Stage Talks (15:45 – 17:10)</h3>
-                            <p>Pick your favorite talk from this block.</p>
-                            <a class="vote-link" href="https://forms.gle/EmArnJGCF14jtEjC9" target="_blank" rel="noopener noreferrer">Open voting form</a>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Main Stage Talks (15:45 – 17:10)</h3>
+                            <p class="text-white/70">Pick your favorite talk from this block.</p>
+                            <a class="mt-3 inline-flex items-center gap-2 rounded-full border border-[#55e3b3]/40 bg-[#55e3b3]/15 px-4 py-2 text-sm font-semibold hover:bg-[#55e3b3]/25" href="https://forms.gle/EmArnJGCF14jtEjC9" target="_blank" rel="noopener noreferrer">Open voting form</a>
                         </div>
                     </li>
-                    <li class="slot highlight">
-                        <div class="time">17:10 – 17:45</div>
+                    <li class="grid gap-4 rounded-2xl border border-[#8a9aff]/55 bg-[#141828]/90 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#8a9aff]">17:10 – 17:45</div>
                         <div>
-                            <h3>Closing Notes and Best Talk Award</h3>
-                            <p>Anna Gruber</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Closing Notes and Best Talk Award</h3>
+                            <p class="text-white/70">Anna Gruber</p>
                         </div>
                     </li>
-                    <li class="slot break">
-                        <div class="time">From 18:30</div>
+                    <li class="grid gap-4 rounded-2xl border border-[#f4c97a]/50 bg-[#191c26]/90 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">From 18:30</div>
                         <div>
-                            <h3>Dinner</h3>
-                            <p>Wrap up and connect.</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Dinner</h3>
+                            <p class="text-white/70">Wrap up and connect.</p>
                         </div>
                     </li>
                 </ol>
             </section>
 
-            <section class="schedule" id="second-stage">
-                <div class="schedule-head">
-                    <h2>Schedule for Second Stage</h2>
+            <section class="mt-16" id="second-stage">
+                <div class="flex flex-wrap items-baseline justify-between gap-3">
+                    <h2 class="text-[clamp(1rem,2.6vw,1.2rem)] font-semibold uppercase tracking-[0.12em] text-[#55e3b3]">Schedule for Second Stage</h2>
                 </div>
-                <ol class="timeline">
-                    <li class="slot">
-                        <div class="time">13:00 – 13:15</div>
+                <ol class="mt-6 grid gap-4">
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">13:00 – 13:15</div>
                         <div>
-                            <h3>AI/Career Development</h3>
-                            <p>Daniela Gómez</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">AI/Career Development</h3>
+                            <p class="text-white/70">Daniela Gómez</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">13:15 – 13:30</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">13:15 – 13:30</div>
                         <div>
-                            <h3>Centralised User Action Audit Trail</h3>
-                            <p>Felipe Santana</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Centralised User Action Audit Trail</h3>
+                            <p class="text-white/70">Felipe Santana</p>
                         </div>
                     </li>
-                    <li class="slot">
-                        <div class="time">13:30 – 13:45</div>
+                    <li class="grid gap-4 rounded-2xl border border-white/20 bg-white/5 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#b9a7ff]">13:30 – 13:45</div>
                         <div>
-                            <h3>Awesome Kotlin Patterns</h3>
-                            <p>Florian Beetz</p>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Awesome Kotlin Patterns</h3>
+                            <p class="text-white/70">Florian Beetz</p>
                         </div>
                     </li>
-                    <li class="slot vote">
-                        <div class="time">Vote</div>
+                    <li class="grid gap-4 rounded-2xl border border-[#55e3b3]/50 bg-[#0f161a]/90 p-5 shadow-xl sm:grid-cols-[160px_1fr]">
+                        <div class="font-semibold text-[#55e3b3]">Vote</div>
                         <div>
-                            <h3>Second Stage Talks (13:00 – 13:45)</h3>
-                            <p>Pick your favorite talk from this block.</p>
-                            <a class="vote-link" href="https://forms.gle/GpfxyBQ9FVtGGAcK8" target="_blank" rel="noopener noreferrer">Open voting form</a>
+                            <h3 class="text-[clamp(1rem,2.4vw,1.1rem)] font-semibold">Second Stage Talks (13:00 – 13:45)</h3>
+                            <p class="text-white/70">Pick your favorite talk from this block.</p>
+                            <a class="mt-3 inline-flex items-center gap-2 rounded-full border border-[#55e3b3]/40 bg-[#55e3b3]/15 px-4 py-2 text-sm font-semibold hover:bg-[#55e3b3]/25" href="https://forms.gle/GpfxyBQ9FVtGGAcK8" target="_blank" rel="noopener noreferrer">Open voting form</a>
                         </div>
                     </li>
                 </ol>
             </section>
 
-            <section class="goals-panel" id="key-goals">
-                <div class="goals-panel-inner">
-                    <h2>Key Goals</h2>
-                    <ul>
+            <section class="mt-16" id="key-goals">
+                <div class="rounded-3xl border border-[#55e3b3]/20 bg-white/5 p-7 shadow-2xl">
+                    <h2 class="text-[clamp(1rem,2.6vw,1.2rem)] font-semibold uppercase tracking-[0.12em] text-[#55e3b3]">Key Goals</h2>
+                    <ul class="mt-4 list-disc space-y-2 pl-5 text-[clamp(0.95rem,2.2vw,1.05rem)] text-white/80">
                         <li>Foster cross-alliance knowledge sharing</li>
                         <li>Highlight innovative projects and practices</li>
                         <li>Strengthen connections across all engineering teams</li>
@@ -336,24 +360,24 @@
                 </div>
             </section>
 
-            <section class="voting-panel" id="voting">
-                <div class="voting-panel-inner">
-                    <h2>Voting</h2>
-                    <p>Cast your vote for your favorite talks.</p>
-                    <div class="voting-links">
-                        <a class="vote-link" href="https://forms.gle/MEYS21LY9XK1Tza7A" target="_blank" rel="noopener noreferrer">Main Stage (10:15 – 10:35)</a>
-                        <a class="vote-link" href="https://forms.gle/pcddGKHkPoCeiuWZ7" target="_blank" rel="noopener noreferrer">Main Stage (10:55 – 12:00)</a>
-                        <a class="vote-link" href="https://forms.gle/BAu71GhKQfRDWTha7" target="_blank" rel="noopener noreferrer">Main Stage (13:00 – 14:45)</a>
-                        <a class="vote-link" href="https://forms.gle/EmArnJGCF14jtEjC9" target="_blank" rel="noopener noreferrer">Main Stage (15:45 – 17:10)</a>
-                        <a class="vote-link" href="https://forms.gle/GpfxyBQ9FVtGGAcK8" target="_blank" rel="noopener noreferrer">Second Stage (13:00 – 13:45)</a>
+            <section class="mt-16" id="voting">
+                <div class="rounded-3xl border border-[#8a9aff]/20 bg-white/5 p-7 shadow-2xl">
+                    <h2 class="text-[clamp(1rem,2.6vw,1.2rem)] font-semibold uppercase tracking-[0.12em] text-[#55e3b3]">Voting</h2>
+                    <p class="mt-3 text-[clamp(0.95rem,2.2vw,1.05rem)] text-white/70">Cast your vote for your favorite talks.</p>
+                    <div class="mt-5 grid gap-3">
+                        <a class="rounded-full border border-[#55e3b3]/40 bg-[#55e3b3]/15 px-4 py-2 text-sm font-semibold hover:bg-[#55e3b3]/25" href="https://forms.gle/MEYS21LY9XK1Tza7A" target="_blank" rel="noopener noreferrer">Main Stage (10:15 – 10:35)</a>
+                        <a class="rounded-full border border-[#55e3b3]/40 bg-[#55e3b3]/15 px-4 py-2 text-sm font-semibold hover:bg-[#55e3b3]/25" href="https://forms.gle/pcddGKHkPoCeiuWZ7" target="_blank" rel="noopener noreferrer">Main Stage (10:55 – 12:00)</a>
+                        <a class="rounded-full border border-[#55e3b3]/40 bg-[#55e3b3]/15 px-4 py-2 text-sm font-semibold hover:bg-[#55e3b3]/25" href="https://forms.gle/BAu71GhKQfRDWTha7" target="_blank" rel="noopener noreferrer">Main Stage (13:00 – 14:45)</a>
+                        <a class="rounded-full border border-[#55e3b3]/40 bg-[#55e3b3]/15 px-4 py-2 text-sm font-semibold hover:bg-[#55e3b3]/25" href="https://forms.gle/EmArnJGCF14jtEjC9" target="_blank" rel="noopener noreferrer">Main Stage (15:45 – 17:10)</a>
+                        <a class="rounded-full border border-[#55e3b3]/40 bg-[#55e3b3]/15 px-4 py-2 text-sm font-semibold hover:bg-[#55e3b3]/25" href="https://forms.gle/GpfxyBQ9FVtGGAcK8" target="_blank" rel="noopener noreferrer">Second Stage (13:00 – 13:45)</a>
                     </div>
                 </div>
             </section>
 
-            <section class="sponsor">
-                <div class="sponsor-inner">
-                    <span>Presented by</span>
-                    <img src="Full_WhiteEmerald_Digital_ClearSpace.png" alt="Scalable Capital logo" />
+            <section class="mt-12 flex justify-center">
+                <div class="flex items-center gap-4 rounded-full border border-white/20 bg-[#0f121a]/80 px-6 py-4 shadow-xl">
+                    <span class="text-xs uppercase tracking-[0.2em] text-[#9aa2b1]">Presented by</span>
+                    <img class="h-[52px] w-auto" src="Full_WhiteEmerald_Digital_ClearSpace.png" alt="Scalable Capital logo" />
                 </div>
             </section>
         </main>
