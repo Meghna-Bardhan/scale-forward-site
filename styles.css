@@ -247,6 +247,37 @@ body {
     margin-bottom: 6px;
 }
 
+.voting-panel {
+    margin-top: 48px;
+}
+
+.voting-panel-inner {
+    padding: 24px 26px;
+    border-radius: 22px;
+    background: rgba(18, 21, 30, 0.72);
+    border: 1px solid rgba(138, 154, 255, 0.22);
+    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.35);
+}
+
+.voting-panel h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--violet);
+    font-family: 'Sora', 'Space Grotesk', sans-serif;
+}
+
+.voting-panel p {
+    margin: 0 0 16px;
+    color: var(--slate);
+}
+
+.voting-links {
+    display: grid;
+    gap: 12px;
+}
+
 .schedule {
     margin-top: 72px;
 }
