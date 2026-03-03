@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meghna-bardhan.github.io/scale-forward-site/sitemap.xml

@@ -155,22 +155,28 @@ body {
 }
 
 .subtitle {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: var(--mint);
     margin: 18px 0 10px;
     letter-spacing: 0.02em;
 }
 
 .hero p {
-    font-size: 1.05rem;
+    font-size: clamp(0.95rem, 2.2vw, 1.05rem);
     line-height: 1.7;
     margin: 0 0 18px;
     color: rgba(238, 241, 247, 0.75);
 }
 
+.seo-blurb {
+    margin-top: -4px;
+    color: rgba(238, 241, 247, 0.7);
+    font-size: clamp(0.9rem, 2.1vw, 1rem);
+}
+
 .tagline {
     font-family: 'Sora', 'Space Grotesk', sans-serif;
-    font-size: 1.05rem;
+    font-size: clamp(0.9rem, 2.2vw, 1.05rem);
     letter-spacing: 0.02em;
     text-transform: none;
     color: var(--citrus);
@@ -192,7 +198,7 @@ body {
     font-family: 'Sora', 'Space Grotesk', sans-serif;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: clamp(0.85rem, 2vw, 1rem);
     color: var(--violet);
 }
 
@@ -208,6 +214,7 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.06);
     font-weight: 600;
+    font-size: clamp(0.85rem, 2vw, 0.98rem);
     color: var(--fog);
 }
 
@@ -229,7 +236,7 @@ body {
 
 .goals-panel h2 {
     margin: 0 0 12px;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.6vw, 1.2rem);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--mint);
@@ -261,7 +268,7 @@ body {
 
 .voting-panel h2 {
     margin: 0 0 10px;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.6vw, 1.2rem);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--violet);
@@ -322,7 +329,7 @@ body {
 }
 
 .schedule h2 {
-    font-size: 2.1rem;
+    font-size: clamp(1.4rem, 4vw, 2.1rem);
     margin: 0;
     font-family: 'Sora', 'Space Grotesk', sans-serif;
 }
@@ -367,13 +374,13 @@ body {
 
 .time {
     font-weight: 600;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
     color: var(--violet);
 }
 
 .slot h3 {
     margin: 0 0 6px;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.4vw, 1.1rem);
 }
 
 .slot p {
